@@ -1,0 +1,59 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <!-- Form Column -->
+    <div class="col-md-6 p-0 mt-5">
+      <div class="p-4 border-0">
+        <h2 class="text-center text-secondary">Create Account</h2>
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+          <div class="mb-3">
+            <label class="form-label">First Name</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="firstName"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Last Name</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="lastName"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              formControlName="email"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              formControlName="password"
+              required
+            />
+          </div>
+
+          <button
+            type="submit"
+            class="btn btn-secondary w-100"
+            [disabled]="registerForm.invalid"
+          >
+            Create Account
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
