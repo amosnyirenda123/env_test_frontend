@@ -1,4 +1,4 @@
-name: Build Docker & Deploy Site to GitHub Pages
+name: Build Docker & Deploy to GitHub Pages
 
 on:
   push:
